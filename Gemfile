@@ -32,15 +32,16 @@ group :test do
 end
 
 # -- Cloud storage
-# AWS S3 support. Can be disabled if using local file system instead of cloud storage.
-gem 'fog'
+#google cloud storage support over AWS but still using env variables of aws keys etc
+gem 'fog-google'
+gem 'google-api-client', '~> 0.8.6'
 
 # -- Photo resizing
 # MiniMagick
 gem "mini_magick"
 
 # ImageMagick:
-#gem "rmagick", :require => 'RMagick'
+gem "rmagick", :require => 'RMagick'
 
 # FreeImage:
 #gem "RubyInline"
